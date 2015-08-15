@@ -8,33 +8,38 @@
     <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <link href="styles/footable.core.css" rel="stylesheet" type="text/css" />
-
 </head>
 
  <body>
   <div id="wrapper">
+
+   <div class="controls">
+         <span>Показывать: </span>
+         <input id="IN" type="checkbox" checked><label for="IN">Прилет</label>
+         <input id="OUT" type="checkbox" checked><label for="OUT">Вылет</label>
+   </div>
+
     <table border="1" class="footable">
-     <!-- <caption>Расписание самолетов аэропорта</caption> -->
       <thead>
        <tr>
-                     <th>Тип рейса</th>
-                     <th>Номер рейса</th>
-                     <th data-hide="aircompany">Авиакомпания</th>
-                     <th>Логотип</th>
-                     <th data-hide="typeAircraft">Тип воздушного судна</th>
+                     <th class="col1">Тип рейса</th>
+                     <th class="col2">Номер рейса</th>
+                     <th data-hide="aircompany" class="col3">Авиакомпания</th>
+                     <th>Лого</th>
+                     <th data-hide="typeAircraft">Самолет</th>
                      <th>Аэропорт назначения</th>
-                     <th>Плановое время вылета</th>
-                     <th>Плановое время прилета</th>
+                     <th>Время вылета</th>
+                     <th>Время прилета</th>
                      <th>Статус рейса</th>
                      <th>Примечания</th>
                   </tr>
        </thead>
        <tbody> 
-                  <tr>
-                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" width="20px"></td>
+                  <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
                      <td>AF 4430</td>
                      <td>Air France</td>
-                     <td><img src="img/airfrance.jpg" alt="Air France" title="Air France" width="40px"></td>
+                     <td><img src="img/airfrance.jpg" alt="Air France" title="Air France" class="logo"></td>
                      <td>Airbus А321</td>
                      <td>Екатеринбург</td>
                      <td>00:05</td>
@@ -42,23 +47,23 @@
                      <td>Вылетел</td>
                      <td>-</td>
                   </tr>
-                  <tr>
-                     <td><img src="img/landing.jpg" alt="Приземление" title="Приземление" width="20px"></td>
+                  <tr state="IN">
+                     <td><img src="img/landing.jpg" alt="Приземление" title="Приземление" class="state_img"></td>
                      <td>JU 8153</td>
                      <td>Air Serbia</td>
-                     <td><img src="img/airserbia.jpg" alt="Air Serbia" title="Air Serbia" width="40px"></td>
-                     <td>Boeing 777-300</td>
-                     <td>Санкт-Петербург</td>
+                     <td><img src="img/airserbia.jpg" alt="Air Serbia" title="Air Serbia" class="logo"></td>
+                     <td>Boeing 777</td>
+                     <td>Калининград</td>
                      <td>00:05</td>
                      <td>01:20</td>
                      <td>Ожидается</td>
                      <td>-</td>
                   </tr>
-                  <tr>
-                    <td><img src="img/landing.jpg" alt="Приземление" title="Приземление" width="20px"></td>
+                  <tr state="IN">
+                    <td><img src="img/landing.jpg" alt="Приземление" title="Приземление" class="state_img"></td>
                      <td>SU 2317</td>
                      <td>Аэрофлот</td>
-                     <td><img src="img/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+                     <td><img src="img/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" class="logo"></td>
                      <td>Airbus А320</td>
                      <td>Берлин</td>
                      <td>00:10</td>
@@ -66,23 +71,23 @@
                      <td>Прибыл</td>
                      <td>-</td>
                   </tr>
-                  <tr>
-                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" width="20px"></td>
+                  <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
                      <td>SU 4451</td>
                      <td>Аэрофлот</td>
-                     <td><img src="img/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+                     <td><img src="img/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" class="logo"></td>
                      <td>Airbus А321</td>
                      <td>Париж</td>
                      <td>00:10</td>
                      <td>04:00</td>
-                     <td>Задержан</td>
-                     <td>Технические неполадки</td>
+                     <td>Вылетел</td>
+                     <td>-</td>
                   </tr>
-                  <tr>
-                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" width="20px"></td>
+                  <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
                      <td>AF 4430</td>
                      <td>Air France</td>
-                     <td><img src="img/airfrance.jpg" alt="Air France" title="Air France" width="40px"></td>
+                     <td><img src="img/airfrance.jpg" alt="Air France" title="Air France" class="logo"></td>
                      <td>Airbus А321</td>
                      <td>Екатеринбург</td>
                      <td>00:05</td>
@@ -90,35 +95,35 @@
                      <td>Вылетел</td>
                      <td>-</td>
                   </tr>
-                  <tr>
-                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" width="20px"></td>
+                  <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
                      <td>AZ 3948</td>
                      <td>Alitalia</td>
-                     <td><img src="img/alitalia.jpg" alt="Alitalia" title="Alitalia" width="40px"></td>
+                     <td><img src="img/alitalia.jpg" alt="Alitalia" title="Alitalia" class="logo"></td>
                      <td>Airbus А319</td>
                      <td>Новосибирск</td>
                      <td>00:15</td>
                      <td>04:10</td>
-                     <td>Задержан</td>
-                     <td>Технические неполадки</td>
+                     <td>Вылетел</td>
+                     <td>-</td>
                   </tr>
-                  <tr>
-                    <td><img src="img/landing.jpg" alt="Приземление" title="Приземление" width="20px"></td>
+                  <tr state="IN">
+                    <td><img src="img/landing.jpg" alt="Приземление" title="Приземление" class="state_img"></td>
                      <td>SU 1428</td>
                      <td>Аэрофлот</td>
-                     <td><img src="img/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
-                     <td>Boeing 737-300</td>
+                     <td><img src="img/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" class="logo"></td>
+                     <td>Boeing 737</td>
                      <td>Магнитогорск</td>
                      <td>00:50</td>
                      <td>03:00</td>
                      <td>Прибыл</td>
                      <td>-</td>
                   </tr>
-                  <tr>
-                     <td><img src="img/landing.jpg" alt="Вылет" title="Вылет" width="20px"></td>
+                  <tr state="OUT">
+                    <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
                      <td>N4 1809</td>
                      <td>S7</td>
-                     <td><img src="img/s7.jpg" alt="S7" title="S7" width="40px"></td>
+                     <td><img src="img/s7.jpg" alt="S7" title="S7" class="logo"></td>
                      <td>Airbus А330</td>
                      <td>Анталия</td>
                      <td>01:25</td>
@@ -126,11 +131,11 @@
                      <td>Вылетел</td>
                      <td>-</td>
                   </tr>
-                   <tr>
-                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" width="20px"></td>
+                   <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
                      <td>SU 1244</td>
-                     <td>Уральские авиалинии</td>
-                     <td><img src="img/ural.jpg" alt="Уральские авиалинии" title="Уральские авиалинии" width="40px"></td>
+                     <td>S7</td>
+                     <td><img src="img/s7.jpg" alt="S7" title="S7" class="logo"></td>
                      <td>Airbus А321</td>
                      <td>Оренбург</td>
                      <td>01:00</td>
@@ -138,23 +143,23 @@
                      <td>Вылетел</td>
                      <td>-</td>
                   </tr>
-                  <tr>
-                     <td><img src="img/landing.jpg" alt="Приземление" title="Приземление" width="20px"></td>
+                  <tr state="IN">
+                     <td><img src="img/landing.jpg" alt="Приземление" title="Приземление" class="state_img"></td>
                      <td>JU 8153</td>
                      <td>Air Serbia</td>
-                     <td><img src="img/airserbia.jpg" alt="Air Serbia" title="Air Serbia" width="40px"></td>
-                     <td>Boeing 777-300</td>
-                     <td>Санкт-Петербург</td>
+                     <td><img src="img/airserbia.jpg" alt="Air Serbia" title="Air Serbia" class="logo"></td>
+                     <td>Boeing 777</td>
+                     <td>Калининград</td>
                      <td>00:05</td>
                      <td>01:20</td>
                      <td>Ожидается</td>
                      <td>-</td>
                   </tr>
-                    <tr>
-                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" width="20px"></td>
+                    <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
                      <td>AF 4960</td>
                      <td>Air France</td>
-                     <td><img src="img/airfrance.jpg" alt="Air France" title="Air France" width="40px"></td>
+                     <td><img src="img/airfrance.jpg" alt="Air France" title="Air France" class="logo"></td>
                      <td>Airbus А321</td>
                      <td>Уфа</td>
                      <td>01:20</td>
@@ -162,11 +167,11 @@
                      <td>Вылетел</td>
                      <td>-</td>
                   </tr>
-                   <tr>
-                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" width="20px"></td>
+                   <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
                      <td>AZ 3026</td>
                      <td>Alitalia</td>
-                     <td><img src="img/alitalia.jpg" alt="Alitalia" title="Alitalia" width="40px"></td>
+                     <td><img src="img/alitalia.jpg" alt="Alitalia" title="Alitalia" class="logo"></td>
                      <td>Airbus А319</td>
                      <td>Уфа</td>
                      <td>01:20</td>
@@ -174,11 +179,11 @@
                      <td>Вылетел</td>
                      <td>-</td>
                   </tr>
-                  <tr>
-                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" width="20px"></td>
+                  <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
                      <td>SU 1234</td>
                      <td>Аэрофлот</td>
-                     <td><img src="img/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+                     <td><img src="img/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" class="logo"></td>
                      <td>Airbus А321</td>
                      <td>Уфа</td>
                      <td>01:20</td>
@@ -186,11 +191,11 @@
                      <td>Вылетел</td>
                      <td>-</td>
                   </tr>
-                     <tr>
-                     <td><img src="img/landing.jpg" alt="Вылет" title="Вылет" width="20px"></td>
+                     <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
                      <td>N4 1801</td>
                      <td>S7</td>
-                     <td><img src="img/s7.jpg" alt="S7" title="S7" width="40px"></td>
+                     <td><img src="img/s7.jpg" alt="S7" title="S7" class="logo"></td>
                      <td>Airbus А330</td>
                      <td>Анталия</td>
                      <td>02:05</td>
@@ -198,11 +203,11 @@
                      <td>Вылетел</td>
                      <td>-</td>
                   </tr> 
-                   <tr>
-                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" width="20px"></td>
+                   <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
                      <td>SU 3205</td>
                       <td>Аэрофлот</td>
-                     <td><img src="img/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+                     <td><img src="img/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" class="logo"></td>
                      <td>Airbus А320</td>
                      <td>Рим</td>
                      <td>02:05</td>
@@ -210,10 +215,120 @@
                      <td>Вылетел</td>
                      <td>-</td>
                   </tr>
+                  <tr state="IN">
+                    <td><img src="img/landing.jpg" alt="Приземление" title="Приземление" class="state_img"></td>
+                     <td>SU 4451</td>
+                     <td>Аэрофлот</td>
+                     <td><img src="img/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" class="logo"></td>
+                     <td>Airbus А321</td>
+                     <td>Париж</td>
+                     <td>03:10</td>
+                     <td>07:00</td>
+                     <td>Прибыл</td>
+                     <td>-</td>
+                  </tr>
+                  <tr state="IN">
+                     <td><img src="img/landing.jpg" alt="Приземление" title="Приземление" class="state_img"></td>
+                     <td>AF 4430</td>
+                     <td>Air France</td>
+                     <td><img src="img/airfrance.jpg" alt="Air France" title="Air France" class="logo"></td>
+                     <td>Airbus А321</td>
+                     <td>Екатеринбург</td>
+                     <td>04:05</td>
+                     <td>06:05</td>
+                     <td>Прибыл</td>
+                     <td>-</td>
+                  </tr>
+                  <tr state="IN">
+                     <td><img src="img/landing.jpg" alt="Приземление" title="Приземление" class="state_img"></td>
+                     <td>AZ 3948</td>
+                     <td>Alitalia</td>
+                     <td><img src="img/alitalia.jpg" alt="Alitalia" title="Alitalia" class="logo"></td>
+                     <td>Airbus А319</td>
+                     <td>Новосибирск</td>
+                     <td>04:15</td>
+                     <td>08:10</td>
+                     <td>Прибыл</td>
+                     <td>-</td>
+                  </tr>
+
+                  <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
+                     <td>AF 4430</td>
+                     <td>Air France</td>
+                     <td><img src="img/airfrance.jpg" alt="Air France" title="Air France" class="logo"></td>
+                     <td>Airbus А321</td>
+                     <td>Екатеринбург</td>
+                     <td>00:05</td>
+                     <td>02:05</td>
+                     <td>Вылетел</td>
+                     <td>-</td>
+                  </tr>
+                  <tr state="IN">
+                     <td><img src="img/landing.jpg" alt="Приземление" title="Приземление" class="state_img"></td>
+                     <td>JU 8153</td>
+                     <td>Air Serbia</td>
+                     <td><img src="img/airserbia.jpg" alt="Air Serbia" title="Air Serbia" class="logo"></td>
+                     <td>Boeing 777</td>
+                     <td>Калининград</td>
+                     <td>00:05</td>
+                     <td>01:20</td>
+                     <td>Ожидается</td>
+                     <td>-</td>
+                  </tr>
+                  <tr state="IN">
+                    <td><img src="img/landing.jpg" alt="Приземление" title="Приземление" class="state_img"></td>
+                     <td>SU 2317</td>
+                     <td>Аэрофлот</td>
+                     <td><img src="img/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" class="logo"></td>
+                     <td>Airbus А320</td>
+                     <td>Берлин</td>
+                     <td>00:10</td>
+                     <td>02:45</td>
+                     <td>Прибыл</td>
+                     <td>-</td>
+                  </tr>
+                  <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
+                     <td>SU 4451</td>
+                     <td>Аэрофлот</td>
+                     <td><img src="img/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" class="logo"></td>
+                     <td>Airbus А321</td>
+                     <td>Париж</td>
+                     <td>00:10</td>
+                     <td>04:00</td>
+                     <td>Вылетел</td>
+                     <td>-</td>
+                  </tr>
+                  <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
+                     <td>AF 4430</td>
+                     <td>Air France</td>
+                     <td><img src="img/airfrance.jpg" alt="Air France" title="Air France" class="logo"></td>
+                     <td>Airbus А321</td>
+                     <td>Екатеринбург</td>
+                     <td>00:05</td>
+                     <td>02:05</td>
+                     <td>Вылетел</td>
+                     <td>-</td>
+                  </tr>
+                  <tr state="OUT">
+                     <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" class="state_img"></td>
+                     <td>AZ 3948</td>
+                     <td>Alitalia</td>
+                     <td><img src="img/alitalia.jpg" alt="Alitalia" title="Alitalia" class="logo"></td>
+                     <td>Airbus А319</td>
+                     <td>Новосибирск</td>
+                     <td>00:15</td>
+                     <td>04:10</td>
+                     <td>Вылетел</td>
+                     <td>-</td>
+                  </tr>
       </tbody>
     </table>
   </div> 
 
+   <!-- Скрыть наименее важные столбцы -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
    <script src="js/footable.js" type="text/javascript"></script>
    <script type="text/javascript">
@@ -223,6 +338,20 @@ $(function () {
 
 });
 </script>
+
+<script type="text/javascript">
+   //Переключатель
+   $('.controls').find('input').on('change',function(){
+      typeId = $(this).prop('id');
+      if(this.checked){
+         $('tr[state='+typeId+']').css('display','table-row');
+      }
+      else {
+         $('tr[state='+typeId+']').css('display','none');
+      }
+   });
+</script>
+
  </body>
 </html>
 

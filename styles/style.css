@@ -25,6 +25,10 @@
     }
     body {
         line-height: 1;
+        font-size: 14px;
+        font-family: Helvetica, sans-serif;
+        background-color: #233675;
+        color: #fff;
     }
     ol, ul {
         list-style: none;
@@ -32,7 +36,7 @@
 
     #wrapper{
         max-width: 1000px;
-        min-width: 700px;
+        min-width: 800px;
         width:100%;
         overflow:hidden;
         margin:0 auto;
@@ -40,7 +44,7 @@
     }
 
     table { 
-    width: 100%; /* Ширина таблицы */
+    width: 100%; 
     border-spacing: 0; /* Расстояние между ячейками */
     border-collapse: collapse;
     position:relative;
@@ -48,27 +52,15 @@
     table-layout: fixed; /*identical width columns*/
    }
 
-td, th {
-  width: 2%; /*Safari*/
-}
-
-   caption{
-    width: 100%;
-    padding:20px 0 20px 0;
-    background-color: #6666ff;
-    font-family: Helvetica, sans-serif;
-    color:#fff;
-    font-size: 25px;
-    /*position: fixed;
-    top: 0;*/
-      }
+    td, th {
+      width: 2%; /*Safari*/
+    }
 
    tr:nth-child(2n) {
-    background: #6580d8; /* Цвет фона */
+    background: #6580d8; 
    } 
    tr:nth-child(2n+1) {
-    background: #233675; /* Цвет фона */
-    color: #fff; /* Цвет текста */
+    background: #233675; 
    } 
 
    table tbody tr:hover td:nth-child(odd){ /*при наведении мыши*/
@@ -79,32 +71,59 @@ td, th {
         background-color:#94d2e6;
     }
 
-
-    table th{ 
-        color:#fff;
-        padding: 15px 0;
-        font-size: 14px;
-        font-family: Helvetica, sans-serif;
-    }
-
-    table td{
+    table th, td{ 
+        padding: 10px 0;
         text-align:center;
-        color:#fff;
-        padding: 10px 5px;
-        font-size: 14px;
-        font-family: Helvetica, sans-serif;
     }
 
-    thead: tr,th {
-        position: fixed;
-        width: 2%; /*Safari*/
-    }
     thead {
          position: fixed;
          max-width: 1000px; 
          min-width: 700px;
-         table-layout: fixed; /*identical width columns*/
+         table-layout: fixed; 
+         top: 0;
+         padding-top: 20px;
+          text-align: center;
     }
 
-      
- 
+    thead: tr,th {
+        width: 20%; /*Safari*/
+        padding: 10px 0;
+    }
+   
+   .col1 {
+    padding-left: 10px;
+   }
+   .col2 {
+    padding-left: 20px;
+   }
+    .col3 {
+    font-size: 13.5px;
+   }
+   .col1, col2, col3{
+      min-width: 10%;
+   }
+
+    tbody {
+        position: relative;
+        table-layout: fixed; 
+    } 
+
+    .state_img {
+        height: 25px;
+        width: 25px;
+    }
+
+    .logo {
+        height: 20px;
+        width: 60px;
+    }
+
+    .controls {
+        padding-bottom: 10px;
+        background-color: #233675;
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+     }
+
