@@ -43,7 +43,6 @@
     width: 100%; /* Ширина таблицы */
     border-spacing: 0; /* Расстояние между ячейками */
     border-collapse: collapse;
-    width:100%;
     position:relative;
     border-color: black;
     table-layout: fixed; /*identical width columns*/
@@ -84,7 +83,7 @@ td, th {
     table th{ 
         color:#fff;
         padding: 15px 0;
-        font-size: 16px;
+        font-size: 14px;
         font-family: Helvetica, sans-serif;
     }
 
@@ -95,3 +94,17 @@ td, th {
         font-size: 14px;
         font-family: Helvetica, sans-serif;
     }
+
+    thead: tr,th {
+        position: fixed;
+        width: 2%; /*Safari*/
+    }
+    thead {
+         position: fixed;
+         max-width: 1000px; 
+         min-width: 700px;
+         table-layout: fixed; /*identical width columns*/
+    }
+
+      
+ 
