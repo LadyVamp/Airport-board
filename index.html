@@ -6,25 +6,30 @@
     <title>Табло аэропорта</title>
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link href="styles/footable.core.css" rel="stylesheet" type="text/css" />
+
 </head>
 
  <body>
   <div id="wrapper">
-    <table border="1">
+    <table border="1" class="footable">
      <caption>Расписание самолетов аэропорта</caption>
-       <tbody> 
-                   <tr>
-                     <td>Тип рейса</td>
-                     <td>Номер рейса</td>
-                     <td>Авиакампания</td>
-                     <td>Логотип</td>
-                     <td>Тип воздушного судна</td>
-                     <td>Аэропорт назначения</td>
-                     <td>Плановое время вылета</td>
-                     <td>Плановое время прилета</td>
-                     <td>Статус рейса</td>
-                     <td>Примечания</td>
+      <thead>
+       <tr>
+                     <th>Тип рейса</th>
+                     <th>Номер рейса</th>
+                     <th data-hide="aircompany">Авиакомпания</th>
+                     <th>Логотип</th>
+                     <th data-hide="typeAircraft">Тип воздушного судна</th>
+                     <th>Аэропорт назначения</th>
+                     <th>Плановое время вылета</th>
+                     <th>Плановое время прилета</th>
+                     <th>Статус рейса</th>
+                     <th>Примечания</th>
                   </tr>
+       </thead>
+       <tbody> 
                   <tr>
                      <td><img src="img/departure.jpg" alt="Вылет" title="Вылет" width="20px"></td>
                      <td>AF 4430</td>
@@ -208,5 +213,16 @@
       </tbody>
     </table>
   </div> 
+
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+   <script src="js/footable.js" type="text/javascript"></script>
+   <script type="text/javascript">
+$(function () {
+
+    $('.footable').footable();
+
+});
+</script>
  </body>
 </html>
+
