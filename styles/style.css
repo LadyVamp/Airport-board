@@ -45,7 +45,12 @@
     width:100%;
     position:relative;
     border-color: black;
+    table-layout: fixed; /*identical width columns*/
    }
+
+td, th {
+  width: 2%; /*Safari*/
+}
 
    caption{
     width: 100%;
@@ -57,32 +62,6 @@
     /*position: fixed;
     top: 0;*/
       }
-
-thead{
-    position: fixed;
-    top: 0;
-    border-spacing: 0; /* Расстояние между ячейками */
-    border-collapse: collapse;
-    width:100%;
-    text-align: center;
-}
-
-/*  table thead th{ 
-        color:#fff;
-        padding: 15px 0;
-        font-size: 1.5em;
-        font-family: Helvetica, sans-serif;
-        position:fixed;
-        top:0;
-    }
-
-    table thead td{
-        text-align:center;
-        color:#fff;
-        padding: 10px 5px;
-        font-size: 0.9em;
-        font-family: Helvetica, sans-serif;
-    }*/
 
    tr:nth-child(2n) {
     background: #6580d8; /* Цвет фона */
